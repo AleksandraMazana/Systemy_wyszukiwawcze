@@ -1,13 +1,13 @@
 import requests
-from datetime import datetime
+from datetime 
+import datetime
 import time
 import json
 import os
 import re
-<<<<<<< HEAD
 import webbrowser
 =======
->>>>>>> 8e4148a99d349262b1fe47e0c5512b367ac5d833
+
 # Zapytanie (GET) do API bip.poznan
 r = requests.get('http://bip.poznan.pl/api-json/bip/news/-,c,8380/')
 #Przypisanie do zmiennej result otrzymanego tekstu i sformatowanie do JSON
@@ -35,10 +35,8 @@ def dateSort():
 	   print(cleanhtml(sorted_date[i].get('nw_text')))
 	   print(' 			')
 	   print(' 			')
-<<<<<<< HEAD
 	   print('===============================================')
-=======
->>>>>>> 8e4148a99d349262b1fe47e0c5512b367ac5d833
+	
 	print('Naciśnij dowolny przycisk aby kontynuować')
 	x = input()
 	#wyczyszczenie konsoli
@@ -63,7 +61,6 @@ def placeSort():
 		#Przypisanie do zmiennej time wyników działania REGEX timePattern
 		time = re.search(timePattern,ogloszenie)
 		#Wypisanie danych w konsoli
-<<<<<<< HEAD
 		print('===============================================')
 		print(' ')
 		if dopasowanie:
@@ -86,7 +83,6 @@ def placeSort():
 		print('  ')
 		print(' ')
 		print('===============================================')
-=======
 		print('Lokalizacja: ' + dopasowanie.group())
 		print('Data: ' + listaOgloszen[i].get('nw_to_date'))
 		print('Czas: ' + time.group())
@@ -95,7 +91,6 @@ def placeSort():
 		print(listaOgloszen[i].get('nw_text'))
 		print('  ')
 		print(' ')
->>>>>>> 8e4148a99d349262b1fe47e0c5512b367ac5d833
 
 	print("Naciśnij dowolny przycisk aby kontynuować")	
 	x = input()
@@ -124,7 +119,6 @@ def searchByPharse(pharse):
 	
 	for i in range(0,len(sorted_date)):
 	
-<<<<<<< HEAD
 	   clearText = cleanhtml(sorted_date[i].get('nw_text'))
 	   
 	   if pharse in clearText:
@@ -150,9 +144,6 @@ def searchByPharse(pharse):
 	clear()
 	#powrót do menu głównego
 	mainMenu()
-	
-=======
->>>>>>> 8e4148a99d349262b1fe47e0c5512b367ac5d833
 	
 	
 	
@@ -249,23 +240,15 @@ tr:nth-child(even) {
 	mainMenu()
 	
 	
-
-		
-	
-<<<<<<< HEAD
-
-	
-=======
->>>>>>> 8e4148a99d349262b1fe47e0c5512b367ac5d833
 #Funkcja wypisujące menu w konsoli
 def mainMenu():
 	print('========================MENU========================')
-	print('						 							   ')
-	print('1.Sortuj po dacie     							   ')
-	print('2.Sortuj po miejscu   							   ')
-	print('3.Wyszukaj fraze      							   ')
+	print('						 	   ')
+	print('1.Sortuj po dacie     				   ')
+	print('2.Sortuj po miejscu   				   ')
+	print('3.Wyszukaj fraze      				   ')
 	print('4.Drukuj wyszukiwania w HTML (otwarcie przeglądarki)')
-	print('						 							   ')
+	print('						 	   ')
 	print('0.Naciśnij dowolny przycisk aby zakończyć     	   ')
 	print('====================================================')
 	select = input()
@@ -276,7 +259,6 @@ def mainMenu():
     #W przypadku wybrania opcji "Sortuj po dacie" wywołanie funkcji dateSort()
 		dateSort()
 	elif select == '2':
-<<<<<<< HEAD
 		clear = lambda: os.system('cls')
 		clear()
 #W przypadku wybrania opcji "Sortuj po miejscu" wywołanie funkcji placeSort()
@@ -294,7 +276,6 @@ def mainMenu():
 	elif select == '0':
 		clear = lambda: os.system('cls')
 		clear()
-=======
 		clear = lambda: os.system('clear')
 		clear()
 #W przypadku wybrania opcji "Sortuj po miejscu" wywołanie funkcji placeSort()
@@ -302,7 +283,6 @@ def mainMenu():
 	elif select == '0':
 		clear = lambda: os.system('clear')
 		clear()
->>>>>>> 8e4148a99d349262b1fe47e0c5512b367ac5d833
 		print("Poprawnie zakończono działanie programu")
 
 
