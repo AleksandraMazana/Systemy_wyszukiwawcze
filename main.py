@@ -1,12 +1,11 @@
 import requests
-from datetime 
-import datetime
+from datetime import datetime
 import time
 import json
 import os
 import re
 import webbrowser
-=======
+
 
 # Zapytanie (GET) do API bip.poznan
 r = requests.get('http://bip.poznan.pl/api-json/bip/news/-,c,8380/')
@@ -83,13 +82,6 @@ def placeSort():
 		print('  ')
 		print(' ')
 		print('===============================================')
-		print('Lokalizacja: ' + dopasowanie.group())
-		print('Data: ' + listaOgloszen[i].get('nw_to_date'))
-		print('Czas: ' + time.group())
-		print('Tytuł: '+ listaOgloszen[i].get('nw_title'))
-		print(' ')
-		print(listaOgloszen[i].get('nw_text'))
-		print('  ')
 		print(' ')
 
 	print("Naciśnij dowolny przycisk aby kontynuować")	
@@ -273,15 +265,9 @@ def mainMenu():
 		clear = lambda: os.system('cls')
 		clear()
 		printAsHTML()
+
 	elif select == '0':
 		clear = lambda: os.system('cls')
-		clear()
-		clear = lambda: os.system('clear')
-		clear()
-#W przypadku wybrania opcji "Sortuj po miejscu" wywołanie funkcji placeSort()
-		placeSort()
-	elif select == '0':
-		clear = lambda: os.system('clear')
 		clear()
 		print("Poprawnie zakończono działanie programu")
 
